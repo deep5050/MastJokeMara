@@ -1,0 +1,21 @@
+name: 'Mast Joke Mara'
+description: 'Greet with random jokes on new Issue or PR'
+author: 'deep5050'
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github Token for authentication'
+    required: true
+
+  greet_msg: 
+    description: "Initial greet message"
+    required: false
+
+outputs:
+  comment-url:
+    description: 'The comment URL'
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  color: "yellow"
+  icon: "bell" 

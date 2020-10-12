@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "test": "xo"
+  },
+  "devDependencies": {
+    "jest": "^26.5.3",
+    "xo": "^0.33.1"
+  },
+  "name": "mastjokemara",
+  "description": "A GitHub action that greet with random jokes on new Issue or PR",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "axios": "^0.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deep5050/MastJokeMara.git"
+  },
+  "keywords": [
+    "joke",
+    "action",
+    "github-action",
+    "random-joke",
+    "issue",
+    "pull-request"
+  ],
+  "author": "Dipankar Pal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deep5050/MastJokeMara/issues"
+  },
+  "homepage": "https://github.com/deep5050/MastJokeMara#readme"
+}
