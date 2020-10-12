@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const { default: Axios } = require('axios');
 
-
+console.log("workflow started....");
 async function getRandomJoke() {
     const url = "https://sv443.net/jokeapi/v2/joke/Programming,Miscellaneous,Dark,Pun?blacklistFlags=nsfw,religious,political,racist,sexist"
     try {
@@ -10,11 +10,13 @@ async function getRandomJoke() {
         return parseJoke(response.data)
     } catch (err) {
         core.setFailed(`GetChuckText:${err.message}`);
+        console.log(" Error in getting a joke");
         return '';
     }
 }
 
 function parseJoke(jsonData) {
+    console.log("got a joke ....");
     const data = jsonData;
     var jokeMarkDown = "";
     if (data.type === 'single') {
@@ -66,3 +68,6 @@ async function run() {
 getRandomJoke().then((data, err) => {
     joke = data
 })
+
+
+run();
