@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: mast joke mara
-        uses: deep5050/MastJokeMara@main
+        uses: ./
         id: MastJokeMara
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
