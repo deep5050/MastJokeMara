@@ -1,19 +1,19 @@
-name: mast joke mara
-on: [issues, pull_request]
+name: "test-action"
+on: [issues,pull_request]
 
 jobs:
-  comment:
-    if: github.event_name=='pull_request' || github.event_name=='issues'
+  test:
+    name: setup environment
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      - run: npm install      
-      - name: mast joke mara
-      - uses: ./
-        id: MastJokeMara
-        with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/checkout@v1
+    # (optional) set the node version if you do not want to use the one specified in Github environment
+    # see Software installed on GitHub-hosted runners
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: npm install
+    - uses: ./
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
