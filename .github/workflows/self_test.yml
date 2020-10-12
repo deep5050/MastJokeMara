@@ -1,8 +1,5 @@
 name: mast joke mara
-on:
-  pull_request:
-  issues:
-  types: [opened]
+on: [issues, pull_request]
 
 jobs:
   comment:
