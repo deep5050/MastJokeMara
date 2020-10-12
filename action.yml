@@ -15,7 +15,7 @@ outputs:
     description: 'The comment URL'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'
 branding:
   color: "yellow"
   icon: "bell" 
