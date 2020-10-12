@@ -9,7 +9,7 @@
   "name": "mastjokemara",
   "description": "A GitHub action that greet with random jokes on new Issue or PR",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0",
