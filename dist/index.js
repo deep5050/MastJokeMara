@@ -52,6 +52,9 @@ async function run() {
         getRandomJoke().then((data, err) => {
             joke = data
         })
+        console.log(`got this joke: ${joke}`)
+
+        console.log("commenting...")
 
         const comment = octokit.issues.createComment({
             issue_number: issueNumber,
