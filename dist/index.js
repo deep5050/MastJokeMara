@@ -72,9 +72,9 @@ async function run() {
 
         const comment = await octokit.issues.createComment({
             issue_number: issueNumber,
-            owner: 'deep5050',
-            repo: 'MastJokeMara',
-            body: `Hi, ${owner}\n\nThanks for your contribution. Contributors like you make the open source community such an amazing place to be learn, inspire, and create.\n\nHere is a little gift for you,hope you like it :\n\n${joke}`
+            owner: context.payload.repository.owner.login,
+            repo: context.payload.repository.name,
+            body: `Hi, ${context.payload.repository.owner.login}\n\nThanks for your contribution. Contributors like you make the open source community such an amazing place to be learn, inspire, and create.\n\nHere is a little gift for you,hope you like it :\n\n${joke}`
         })
 
 
