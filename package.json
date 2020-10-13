@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "xo"
+    "test": "xo",
+    "prepare": "ncc build index.js --license licenses.txt"
   },
   "devDependencies": {
     "jest": "^26.5.3",

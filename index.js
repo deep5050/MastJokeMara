@@ -39,9 +39,9 @@ async function run() {
         const context = github.context;
 
         console.log(`eventname: ${github.context.eventName}`)
-        console.log(`payload sender: ${github.context.payload.sender}`)
+        console.log(`payload sender: ${JSON.stringify(github.context.payload.sender,undefined,2)}`)
         console.log(`workflow: ${github.context.workflow}`)
-        console.log(`payload: ${github.context.payload}`)
+        console.log(`payload: ${JSON.stringify(github.context.payload,undefined,2)}`)
 
 
         const issueNumber = context.payload.pull_request.number || context.payload.issue.number;
@@ -50,7 +50,7 @@ async function run() {
         getRandomJoke().then((data, err) => {
             joke = data
         })
-        
+
         console.log(`got this joke: ${joke}`)
 
         console.log("commenting...")
