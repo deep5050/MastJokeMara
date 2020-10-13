@@ -12,7 +12,7 @@ const Axios = __webpack_require__(526);
 console.log("workflow started....");
 
 async function getRandomJoke() {
-    const url = "https://sv443.net/jokeapi/v2/joke/Programming,Miscellaneous,Dark,Pun?blacklistFlags=nsfw,religious,political,racist,sexist"
+    const url = "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist"
     try {
         const response = await Axios.get(url);
         return parseJoke(response.data)
@@ -44,7 +44,7 @@ async function run(joke) {
         var event = github.context.eventName;
         var greetMsg;
         if (event === 'pull_request') {
-            greetMsg = 'Thanks for opening this PR :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will review :eyes: and get back to you as soon as possible :+1: . Just make sure you have followed the contribution guidelines.\nBy that time enjoy this joke :point_down: , hope you like it :smile:'
+            greetMsg = 'Thanks for opening this PR :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will review it :eyes: and get back to you as soon as possible :+1: . Just make sure you have followed the contribution guidelines.\nBy that time enjoy this joke :point_down: , hope you like it :smile:'
         }
         else if (event = 'issues') {
             greetMsg = 'Thanks for your contribution :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will investigate :eyes:  and get back to you as soon as possible :+1: . Just make sure you have given us sufficient information :information_source:.\nBy that time enjoy this joke :point_down: , hope you like it :smile:'
@@ -76,7 +76,7 @@ async function run(joke) {
             issue_number: issueNumber,
             owner: context.payload.repository.owner.login,
             repo: context.payload.repository.name,
-            body: `Hi, ${owner},\n${greetMsg}\n>${joke}\nUse this [action](https://github.com/deep5050/MastJokeMara)  on your projects.`
+            body: `Hi, @${owner},\n${greetMsg}\n>${joke}\n\nUse this [action](https://github.com/deep5050/MastJokeMara)  on your projects.`
         })
         core.setOutput('comment-url', comment.data.html_url);
     } catch (error) {
