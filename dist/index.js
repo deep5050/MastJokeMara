@@ -58,7 +58,7 @@ async function run() {
             issueNumber = context.payload.issue.number;
         }
 */
-        const octokit = new github.getOctokit(github_token);
+        const octokit = github.getOctokit(github_token);
 
         getRandomJoke().then((data, err) => {
             joke = data
@@ -68,7 +68,7 @@ async function run() {
 
         console.log("commenting...")
 
-        const comment = octokit.issues.createComment({
+        const comment = await octokit.issues.createComment({
             issue_number: issueNumber,
             owner: context.repo.owner,
             repo: context.repo.repo,
