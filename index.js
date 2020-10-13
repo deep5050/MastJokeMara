@@ -51,7 +51,7 @@ async function run() {
             issueNumber = context.payload.issue.number;
         }
 */
-        const octokit = new github.GitHub(github_token);
+        const octokit = new github.getOctokit(github_token);
 
         getRandomJoke().then((data, err) => {
             joke = data
