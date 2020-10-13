@@ -85,7 +85,7 @@ async function run(joke) {
 
 
 getRandomJoke().then((data) => {
-    console.log(`joke: ${joke}`);
+    console.log(`joke: ${data}`);
     run(data);
 }).catch((err) => {
     core.setFailed(`Error: ${err}`)
