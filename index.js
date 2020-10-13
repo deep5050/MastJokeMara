@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const { default: Axios } = require('axios');
+const Axios = require('axios');
 
 console.log("workflow started....");
 async function getRandomJoke() {
@@ -39,12 +39,17 @@ async function run() {
         const context = github.context;
 
         console.log(`eventname: ${github.context.eventName}`)
-        console.log(`payload sender: ${JSON.stringify(github.context.payload.sender,undefined,2)}`)
+        console.log(`payload sender: ${JSON.stringify(github.context.payload.sender, undefined, 2)}`)
         console.log(`workflow: ${github.context.workflow}`)
-        console.log(`payload: ${JSON.stringify(github.context.payload,undefined,2)}`)
+        console.log(`payload: ${JSON.stringify(github.context.payload, undefined, 2)}`)
 
 
-        const issueNumber = context.payload.pull_request.number || context.payload.issue.number;
+        var issueNumber;
+        if (context.payload.pull_request.number !== undefined) {
+            issueNumber = context.payload.pull_request.number;
+        } else {
+            issueNumber = context.payload.issue.number;
+        }
         const octokit = new github.GitHub(github_token);
 
         getRandomJoke().then((data, err) => {
@@ -69,9 +74,7 @@ async function run() {
     }
 }
 
-getRandomJoke().then((data, err) => {
-    joke = data
-})
+
 
 
 run();
