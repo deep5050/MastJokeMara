@@ -64,10 +64,10 @@
 
 
 ## About The Project
-
+![Issue demo](images/issue.png)
 
 ### Built With
-
+@action/javascript
 
 ## Getting Started
 
