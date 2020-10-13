@@ -51,12 +51,13 @@ async function run() {
         console.log(`payload: ${JSON.stringify(github.context.payload, undefined, 2)}`)
 
 
-        var issueNumber;
-        if (context.payload.pull_request.number !== undefined) {
+        var issueNumber = context.payload.issue.number;;
+        /*if (context.payload.pull_request.number !== undefined) {
             issueNumber = context.payload.pull_request.number;
         } else {
             issueNumber = context.payload.issue.number;
         }
+*/
         const octokit = new github.GitHub(github_token);
 
         getRandomJoke().then((data, err) => {
