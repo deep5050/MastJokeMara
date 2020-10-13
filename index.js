@@ -32,17 +32,25 @@ function parseJoke(jsonData) {
 
 async function run() {
     try {
+        var joke = "";
+
         const github_token = core.getInput('GITHUB_TOKEN');
 
         const context = github.context;
-        const issueNumber = context.payload.pull_request.number || context.payload.issue.number;
 
+        console.log(`eventname: ${github.context.eventName}`)
+        console.log(`payload sender: ${github.context.payload.sender}`)
+        console.log(`workflow: ${github.context.workflow}`)
+        console.log(`payload: ${github.context.payload}`)
+
+
+        const issueNumber = context.payload.pull_request.number || context.payload.issue.number;
         const octokit = new github.GitHub(github_token);
-        var joke = "";
 
         getRandomJoke().then((data, err) => {
             joke = data
         })
+        
         console.log(`got this joke: ${joke}`)
 
         console.log("commenting...")
