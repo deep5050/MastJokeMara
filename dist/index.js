@@ -42,10 +42,6 @@ async function run() {
         const github_token = core.getInput('GITHUB_TOKEN');
 
         const context = github.context;
-        if (context.payload.pull_request == null || context.payload.issue == null) {
-            core.setFailed('No PR/issue found.');
-            return;
-        }
         const issueNumber = context.payload.pull_request.number || context.payload.issue.number;
 
         const octokit = new github.GitHub(github_token);
