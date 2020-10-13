@@ -2,8 +2,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/deep5050/godfather">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/deep5050/MastJokeMara">
+    <img src="images/logo.jpg" alt="Logo">
   </a>
 
   <h3 align="center">MAST JOKE MARA</h3>
