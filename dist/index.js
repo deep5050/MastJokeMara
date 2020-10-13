@@ -59,7 +59,7 @@ async function run() {
         }
 */
         const octokit = github.getOctokit(github_token);
-
+            
         getRandomJoke().then((data, err) => {
             joke = data
         })
@@ -68,10 +68,12 @@ async function run() {
 
         console.log("commenting...")
 
+ 
+
         const comment = await octokit.issues.createComment({
             issue_number: issueNumber,
-            owner: context.payload.repository.owner.login,
-            repo: context.payload.repository.name,
+            owner: 'deep5050',
+            repo: 'MastJokeMara',
             body: `Hi, ${owner}\n\nThanks for your contribution. Contributors like you make the open source community such an amazing place to be learn, inspire, and create.\n\nHere is a little gift for you,hope you like it :\n\n${joke}`
         })
 
