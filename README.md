@@ -9,7 +9,7 @@
   <h3 align="center">MAST JOKE MARA</h3>
 
   <p align="center">
-    A GitHub workflow to greet with a random joke on new isssue or PR :)
+    A GitHub workflow to greet with a random joke on a new isssue or Pull Request :)
   <br/>
 
 <br />
