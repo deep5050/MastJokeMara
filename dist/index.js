@@ -10,6 +10,7 @@ const github = __webpack_require__(8472);
 const Axios = __webpack_require__(526);
 
 console.log("workflow started....");
+
 async function getRandomJoke() {
     const url = "https://sv443.net/jokeapi/v2/joke/Programming,Miscellaneous,Dark,Pun?blacklistFlags=nsfw,religious,political,racist,sexist"
     try {
@@ -37,20 +38,19 @@ function parseJoke(jsonData) {
 }
 
 
-async function run() {
+async function run(joke) {
     try {
-        var joke = "";
-
         const github_token = core.getInput('GITHUB_TOKEN');
 
         const context = github.context;
 
+        /*
         console.log(`eventname: ${github.context.eventName}`)
         console.log(`payload sender: ${JSON.stringify(github.context.payload.sender, undefined, 2)}`)
         console.log(`workflow: ${github.context.workflow}`)
         console.log(`payload: ${JSON.stringify(github.context.payload, undefined, 2)}`)
 
-
+*/
         var issueNumber = context.payload.issue.number;;
         /*if (context.payload.pull_request.number !== undefined) {
             issueNumber = context.payload.pull_request.number;
@@ -59,16 +59,14 @@ async function run() {
         }
 */
         const octokit = github.getOctokit(github_token);
-            
-        getRandomJoke().then((data, err) => {
-            joke = data
-        })
+
+
 
         console.log(`got this joke: ${joke}`)
 
         console.log("commenting...")
 
- 
+
 
         const comment = await octokit.issues.createComment({
             issue_number: issueNumber,
@@ -86,8 +84,12 @@ async function run() {
 
 
 
-
-run();
+getRandomJoke().then((data) => {
+    console.log(`joke: ${joke}`);
+    run(data);
+}).catch((err) => {
+    core.setFailed(`Error: ${err}`)
+})
 
 /***/ }),
 
