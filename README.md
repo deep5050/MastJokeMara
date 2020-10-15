@@ -88,8 +88,12 @@ Any public or private repository can run this workflow by copying [greet_with_jo
 ## Usage
 
 ```yaml
-name: "Greet With A Joke"
-on: [issues,pull_request]
+name: "Greet With A Random Joke"
+on:
+  issues:
+    types: [opened, reopened]
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   test:
@@ -99,9 +103,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: mast joke mara
-        uses: deep5050/MastjokeMara@main
+        uses: deep5050/MastJokeMara@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 ````
 
 
