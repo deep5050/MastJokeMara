@@ -44,14 +44,11 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
 * [Usage](#usage)
 * [Roadmap](#roadmap)
 * [Version History](#version-history)
@@ -59,47 +56,55 @@
 * [Support](#support)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
 * [Related Works](#related-works)
 
 
 ## About The Project
+
+> On new Issues
+
 ![Issue demo](images/issue.png)
 
+> On new Pull Requests
+
+![PR](images/PR.png)
+
+This workflow comments on a new issue or pull request by a lovely greeting and with a complimentary joke.
+
+For now it supports only programming jokes only, It will supports more joke soon.
+
 ### Built With
-@action/javascript
+
+- [@action/toolkit](https://github.com/actions/toolkit)
+- [JokeAPI](https://github.com/Sv443/JokeAPI)
+
 
 ## Getting Started
 
-### Prerequisites
-
-
-### Installation
-
+Any public or private repository can run this workflow by copying [greet_with_joke.yml](./greet_with_joke.yml) file to their `.github/workflows` direcory.
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+
 ```yaml
-name: mast joke mara
-on:
-  pull_request:
-  issues:
-  types: [opened]
+name: "Greet With A Joke"
+on: [issues,pull_request]
 
 jobs:
-  comment:
-    if: github.event_name=='pull_request' || github.event_name=='issues'
+  test:
+    name: setup environment
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
       - name: mast joke mara
-        uses: deep5050/MastJokeMara@main
-        id: MastJokeMara
+        uses: deep5050/MastjokeMara@main
         with:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ````
 
-<!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://github.com/deep5050/MastJokeMara/issues) for a list of proposed features (and known issues).
@@ -107,7 +112,7 @@ See the [open issues](https://github.com/deep5050/MastJokeMara/issues) for a lis
 
 ## Version History
 
-`v1.0.0` Initial release
+`v1.0.0` [Initial release] : Supports programming jokes
 
 
 <!-- CONTRIBUTING -->
@@ -119,8 +124,15 @@ Contributions are what make the open source community such an amazing place to b
 2. Create your Feature Branch 
 3. Commit your Changes 
 4. Push to the Branch 
-5. Open a Pull Request
+5. Test by creating and issue or PR to your own branch
+6. Open a Pull Request
 
+
+> **DO NOT** make any changes to `dist/index.js` as it is automgically generated from `index.js` by vercel-ncc module.
+
+> Any changes made on `index.js` MUST be reflected on `dist/index.js` too as the workflow runs the `dist/index.js` NOT `index.js` on root.
+
+> **Run `npm run prepare`** before you push any changes made on `index.js` 
 
 ## Support
 
@@ -137,11 +149,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Dipankar Pal - dipankarpal5050@gmail.com
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
 
 
 ## Related Works
