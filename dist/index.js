@@ -11,9 +11,12 @@ const Axios = __webpack_require__(526);
 
 console.log("workflow started....");
 
+const github_token = core.getInput('GITHUB_TOKEN');
+const context = github.context;
+
 const owner = context.payload.sender.login;
-if (owner.includes("[bot]"))
-{
+
+if (owner.includes("[bot]")) {
     console.log("Avoiding bot comments....");
     process.exit(0);
 }
@@ -46,8 +49,7 @@ function parseJoke(jsonData) {
 
 async function run(joke) {
     try {
-        const github_token = core.getInput('GITHUB_TOKEN');
-        const context = github.context;
+
         var event = github.context.eventName;
         var greetMsg;
         if (event === 'pull_request') {
@@ -60,10 +62,10 @@ async function run(joke) {
         console.log(`Running on ${event}......`);
 
 
-       // console.log(`eventname: ${github.context.eventName}`)
-       // console.log(`payload sender: ${JSON.stringify(github.context.payload.sender, undefined, 2)}`)
+        // console.log(`eventname: ${github.context.eventName}`)
+        // console.log(`payload sender: ${JSON.stringify(github.context.payload.sender, undefined, 2)}`)
         // console.log(`workflow: ${github.context.workflow}`)
-       // console.log(`payload: ${JSON.stringify(github.context.payload, undefined, 2)}`)
+        // console.log(`payload: ${JSON.stringify(github.context.payload, undefined, 2)}`)
 
 
         var issueNumber;
@@ -78,7 +80,7 @@ async function run(joke) {
 
         console.log(`got this joke: ${joke}`)
         console.log("commenting...")
-        
+
         const comment = await octokit.issues.createComment({
             issue_number: issueNumber,
             owner: context.payload.repository.owner.login,
