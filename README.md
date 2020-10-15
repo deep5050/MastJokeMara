@@ -75,7 +75,7 @@ For now it supports only programming jokes only, It will supports more joke soon
 
 ### Built With
 
-- [@action/toolkit](https://github.com/actions/toolkit)
+- [@actions/toolkit](https://github.com/actions/toolkit)
 - [JokeAPI](https://github.com/Sv443/JokeAPI)
 
 
