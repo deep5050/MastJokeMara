@@ -60,6 +60,8 @@
 
 
 ## About The Project
+This workflow comments on a new issue or pull request by a lovely greeting and with a complimentary joke.
+For now it supports only programming jokes only, It will supports more jokes soon.
 
 > On new Issues
 
@@ -69,9 +71,7 @@
 
 ![PR](images/PR.png)
 
-This workflow comments on a new issue or pull request by a lovely greeting and with a complimentary joke.
 
-For now it supports only programming jokes only, It will supports more joke soon.
 
 ### Built With
 
@@ -81,7 +81,7 @@ For now it supports only programming jokes only, It will supports more joke soon
 
 ## Getting Started
 
-Any public or private repository can run this workflow by copying [greet_with_joke.yml](./greet_with_joke.yml) file to their `.github/workflows` direcory.
+Any public or private repository can run this workflow by copying [greet_with_joke.yml](./greet_with_joke.yml) file to their `.github/workflows` directory.
 
 
 <!-- USAGE EXAMPLES -->
@@ -124,7 +124,7 @@ Contributions are what make the open source community such an amazing place to b
 2. Create your Feature Branch 
 3. Commit your Changes 
 4. Push to the Branch 
-5. Test by creating and issue or PR to your own branch
+5. Test by raising an issue or a PR on your own branch
 6. Open a Pull Request
 
 
