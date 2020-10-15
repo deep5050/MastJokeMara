@@ -11,6 +11,13 @@ const Axios = __webpack_require__(526);
 
 console.log("workflow started....");
 
+const owner = context.payload.sender.login;
+if (owner.includes("[bot]"))
+{
+    console.log("Avoiding bot comments....");
+    process.exit(0);
+}
+
 async function getRandomJoke() {
     const url = "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist"
     try {
@@ -71,7 +78,7 @@ async function run(joke) {
 
         console.log(`got this joke: ${joke}`)
         console.log("commenting...")
-        const owner = context.payload.sender.login;
+        
         const comment = await octokit.issues.createComment({
             issue_number: issueNumber,
             owner: context.payload.repository.owner.login,
