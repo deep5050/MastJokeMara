@@ -112,6 +112,8 @@ See the [open issues](https://github.com/deep5050/MastJokeMara/issues) for a lis
 
 ## Version History
 
+`v1.1.0` [Avoid bots] : Avoids replying to the bot comments
+
 `v1.0.0` [Initial release] : Supports programming jokes
 
 
