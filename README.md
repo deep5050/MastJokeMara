@@ -31,10 +31,10 @@
   <!-- <a href="https://linkedin.com/in/othneildrew">
   <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555">
   </a> -->
-        <br/><a href="https://github.com/deep5050/MastJokeMara"><strong>See it on Marketplace »</strong></a>
+        <br/><a href="https://github.com/marketplace/actions/mast-joke-mara"><strong>See it on Marketplace »</strong></a>
     <br />
     <!-- <br /> -->
-    <a href="https://github.com/deep5050/MastJokeMara">View Demo</a>
+    <a href="https://github.com/deep5050/MastJokeMara/issues/37">View Demo</a>
     ·
     <a href="https://github.com/deep5050/MastJokeMara/issues">Report Bug</a>
     ·
