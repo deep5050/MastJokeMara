@@ -117,6 +117,8 @@ See the [open issues](https://github.com/deep5050/MastJokeMara/issues) for a lis
 
 ## Version History
 
+`v1.2.0` [Avoid issues raised by bot or owner] : Avoids issues/PRs raised by a bot or the owner himself. Also run only on issue or Pull Request opened and reopened events.
+
 `v1.1.0` [Avoid bots] : Avoids replying to the bot comments
 
 `v1.0.0` [Initial release] : Supports programming jokes
