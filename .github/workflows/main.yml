@@ -1,5 +1,9 @@
 name: "test-action"
-on: [issues,pull_request]
+on:
+  issues:
+    types: [opened, reopened]
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   test:
