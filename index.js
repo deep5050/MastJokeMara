@@ -8,9 +8,10 @@ const github_token = core.getInput('GITHUB_TOKEN');
 const context = github.context;
 
 const owner = context.payload.sender.login;
+const repoOwner = context.payload.repository.owner.login;
 
-if (owner.includes("[bot]")) {
-    console.log("Avoiding bot comments....");
+if (owner.includes("[bot]") || owner === repoOwner) {
+    console.log("Avoiding issues/PR opened by bot/repo owner....");
     process.exit(0);
 }
 
@@ -55,10 +56,10 @@ async function run(joke) {
         console.log(`Running on ${event}......`);
 
 
-       // console.log(`eventname: ${github.context.eventName}`)
-       // console.log(`payload sender: ${JSON.stringify(github.context.payload.sender, undefined, 2)}`)
+        // console.log(`eventname: ${github.context.eventName}`)
+        // console.log(`payload sender: ${JSON.stringify(github.context.payload.sender, undefined, 2)}`)
         // console.log(`workflow: ${github.context.workflow}`)
-       // console.log(`payload: ${JSON.stringify(github.context.payload, undefined, 2)}`)
+        // console.log(`payload: ${JSON.stringify(github.context.payload, undefined, 2)}`)
 
 
         var issueNumber;
