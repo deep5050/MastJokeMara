@@ -4,6 +4,16 @@ const Axios = require('axios');
 
 console.log("workflow started....");
 
+const github_token = core.getInput('GITHUB_TOKEN');
+const context = github.context;
+
+const owner = context.payload.sender.login;
+
+if (owner.includes("[bot]")) {
+    console.log("Avoiding bot comments....");
+    process.exit(0);
+}
+
 async function getRandomJoke() {
     const url = "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist"
     try {
@@ -32,8 +42,7 @@ function parseJoke(jsonData) {
 
 async function run(joke) {
     try {
-        const github_token = core.getInput('GITHUB_TOKEN');
-        const context = github.context;
+
         var event = github.context.eventName;
         var greetMsg;
         if (event === 'pull_request') {
@@ -64,7 +73,7 @@ async function run(joke) {
 
         console.log(`got this joke: ${joke}`)
         console.log("commenting...")
-        const owner = context.payload.sender.login;
+
         const comment = await octokit.issues.createComment({
             issue_number: issueNumber,
             owner: context.payload.repository.owner.login,
