@@ -4,17 +4,12 @@ const Axios = require('axios');
 
 console.log("workflow started....");
 
-const github_token = core.getInput('GITHUB_TOKEN');
+const github_token = core.getInput('GITHUB_TOKEN',{required: true});
 
-var issue_msg = "";
-var PR_msg = "";
 
-try {
-    issueMsg = core.getInput("issue_msg");
-    PRMsg = core.getInput("PR_msg");
-} catch (error) {
-    console.log("Custom messages not provided ");
-}
+const issue_msg = core.getInput("issue_msg",{required: false});
+const PR_msg = core.getInput("PR_msg",{required: false});
+
 
 
 const context = github.context;
@@ -59,23 +54,28 @@ async function run(joke) {
         var event = github.context.eventName;
         var greetMsg;
         if (event === 'pull_request') {
-            if(PR_msg !== "")
+            if(!PR_msg)
             {
-                message = PR_msg;
+                message = 'Hi, {{author}}, \nThanks for opening this PR :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will review it :eyes: and get back to you as soon as possible :+1: . Just make sure you have followed the contribution guidelines.\n\nBy that time enjoy this joke :point_down: , hope you like it :smile:\n{{joke}}'
+                core.debug("PR msg not set, appying default");
             }
             else
             {
-                message = 'Hi, {{author}}, \nThanks for opening this PR :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will review it :eyes: and get back to you as soon as possible :+1: . Just make sure you have followed the contribution guidelines.\n\nBy that time enjoy this joke :point_down: , hope you like it :smile:\n{{joke}}'
+                message = PR_msg;
+                core.debug("PR msg is set");
             }
         }
         else if (event === 'issues') {
-            if (issue_msg!=="")
+            if (!issue_msg)
             {
-                message = issue_msg;
+                message = 'Hi, {{author}}, \nThanks for your contribution :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will investigate :eyes:  and get back to you as soon as possible :+1: . Just make sure you have given us sufficient information :information_source:.\n\nBy that time enjoy this joke :point_down: , hope you like it :smile:\n{{joke}}';
+                core.debug("issue msg not set, applying default message");
             }
             else
             {
-                message = 'Hi, {{author}}, \nThanks for your contribution :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will investigate :eyes:  and get back to you as soon as possible :+1: . Just make sure you have given us sufficient information :information_source:.\n\nBy that time enjoy this joke :point_down: , hope you like it :smile:\n{{joke}}'
+                message = issue_msg;
+                core.debug("Issuer msg is set");
+                
             }
         }
 
