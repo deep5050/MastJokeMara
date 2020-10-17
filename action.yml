@@ -7,11 +7,11 @@ inputs:
     required: true
 
   issue_msg:
-    description: 'Customized Issue message , {{author}} and {{joke}} are two dynamic variables'
+    description: 'your Customized Issue message , {{author}} and {{joke}} two dynamic variables must be included'
     required: false
 
   PR_msg:
-    description: 'Customized Pull request message , {{author}} and {{joke}} are two dynamic variables'
+    description: 'your Customized Pull request message , {{author}} and {{joke}} two dynamic variables must be included'
     required: false
 
 

@@ -87,6 +87,8 @@ Any public or private repository can run this workflow by copying [greet_with_jo
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+> Default configuration
+
 ```yaml
 name: "Greet With A Random Joke"
 on:
@@ -110,12 +112,49 @@ jobs:
 ````
 
 
+> Custom configuration [NEW]
+
+```yaml
+
+name: "Greet With A Random Joke"
+on:
+  issues:
+    types: [opened, reopened]
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  test:
+    name: setup environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: mast joke mara
+        uses: deep5050/MastJokeMara@qikpatch
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          issue_msg: |
+            (ISSUE) Hi, {{author}} here is a joke for you 
+            {{joke}}
+          
+          PR_msg: |
+            (PR) Hi, {{author}} here is a joke for you 
+            {{joke}}
+
+```
+
+When using Custom configuration **DO NOT** forget to include `{{author}}` and `{{joke}}`
+
+
 ## Roadmap
 
 See the [open issues](https://github.com/deep5050/MastJokeMara/issues) for a list of proposed features (and known issues).
 
 
 ## Version History
+
+`v1.3.0` [Custom message support] Added support for custom Issue and PR messages
 
 `v1.2.0` [Avoid issues raised by bot or owner] : Avoids issues/PRs raised by a bot or the owner himself. Also run only on issue or Pull Request opened and reopened events.
 
