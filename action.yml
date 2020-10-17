@@ -6,9 +6,14 @@ inputs:
     description: 'Github Token for authentication'
     required: true
 
-  greet_msg: 
-    description: "Initial greet message"
+  issue_msg:
+    description: 'your Customized Issue message , {{author}} and {{joke}} two dynamic variables must be included'
     required: false
+
+  PR_msg:
+    description: 'your Customized Pull request message , {{author}} and {{joke}} two dynamic variables must be included'
+    required: false
+
 
 outputs:
   comment-url:

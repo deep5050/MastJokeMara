@@ -4,13 +4,20 @@ const Axios = require('axios');
 
 console.log("workflow started....");
 
-const github_token = core.getInput('GITHUB_TOKEN');
+const github_token = core.getInput('GITHUB_TOKEN',{required: true});
+
+
+const issue_msg = core.getInput("issue_msg",{required: false});
+const PR_msg = core.getInput("PR_msg",{required: false});
+
+
+
 const context = github.context;
 
-const owner = context.payload.sender.login;
+const author = context.payload.sender.login;
 const repoOwner = context.payload.repository.owner.login;
 
-if (owner.includes("[bot]") || owner === repoOwner) {
+if (author.includes("[bot]") || author === repoOwner) {
     console.log("Avoiding issues/PR opened by bot/repo owner....");
     process.exit(0);
 }
@@ -47,10 +54,29 @@ async function run(joke) {
         var event = github.context.eventName;
         var greetMsg;
         if (event === 'pull_request') {
-            greetMsg = 'Thanks for opening this PR :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will review it :eyes: and get back to you as soon as possible :+1: . Just make sure you have followed the contribution guidelines.\n\nBy that time enjoy this joke :point_down: , hope you like it :smile:'
+            if(!PR_msg)
+            {
+                message = 'Hi, {{author}}, \nThanks for opening this PR :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will review it :eyes: and get back to you as soon as possible :+1: . Just make sure you have followed the contribution guidelines.\n\nBy that time enjoy this joke :point_down: , hope you like it :smile:\n{{joke}}'
+                core.debug("PR msg not set, appying default");
+            }
+            else
+            {
+                message = PR_msg;
+                core.debug("PR msg is set");
+            }
         }
         else if (event === 'issues') {
-            greetMsg = 'Thanks for your contribution :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will investigate :eyes:  and get back to you as soon as possible :+1: . Just make sure you have given us sufficient information :information_source:.\n\nBy that time enjoy this joke :point_down: , hope you like it :smile:'
+            if (!issue_msg)
+            {
+                message = 'Hi, {{author}}, \nThanks for your contribution :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will investigate :eyes:  and get back to you as soon as possible :+1: . Just make sure you have given us sufficient information :information_source:.\n\nBy that time enjoy this joke :point_down: , hope you like it :smile:\n{{joke}}';
+                core.debug("issue msg not set, applying default message");
+            }
+            else
+            {
+                message = issue_msg;
+                core.debug("Issuer msg is set");
+                
+            }
         }
 
         console.log(`Running on ${event}......`);
@@ -74,12 +100,14 @@ async function run(joke) {
 
         console.log(`got this joke: ${joke}`)
         console.log("commenting...")
+        var messageBody = message.replace('{{author}}','@'+author).replace('{{joke}}','>'+joke);
+        messageBody = messageBody + "\n\nUse this [action](https://github.com/deep5050/MastJokeMara)  on your projects.";
 
         const comment = await octokit.issues.createComment({
             issue_number: issueNumber,
             owner: context.payload.repository.owner.login,
             repo: context.payload.repository.name,
-            body: `Hi, @${owner},\n${greetMsg}\n>${joke}\n\nUse this [action](https://github.com/deep5050/MastJokeMara)  on your projects.`
+            body: messageBody
         })
         core.setOutput('comment-url', comment.data.html_url);
     } catch (error) {
