@@ -29,7 +29,7 @@ const context = github.context;
 const author = context.payload.sender.login;
 const repoOwner = context.payload.repository.owner.login;
 
-if (owner.includes("[bot]") || author === repoOwner) {
+if (author.includes("[bot]") || author === repoOwner) {
     console.log("Avoiding issues/PR opened by bot/repo owner....");
     process.exit(0);
 }
