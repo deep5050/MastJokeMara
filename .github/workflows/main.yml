@@ -16,10 +16,3 @@ jobs:
         uses: deep5050/MastJokeMara@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          issue_msg: |
-            Hi, {{author}} here is a joke for you 
-            {{joke}}
-          
-          PR_msg: |
-            Hi, {{author}} here is a joke for you 
-            {{joke}}
