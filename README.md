@@ -63,11 +63,13 @@
 This workflow comments on a new issue or pull request by a lovely greeting and with a complimentary joke.
 For now it supports only programming jokes only, It will supports more jokes soon.
 
+>NOTE: I recommend you to run this workflow only on issue events, github action has no access to fork-based pull requests yet. Here 'pull requests' means only PRs raised by internal team members or the owner himself !!
+
 > On new Issues
 
 ![Issue demo](images/issue.png)
 
-> On new Pull Requests
+> On new Pull Requests (**NOT FORK-BASED PRs**)
 
 ![PR](images/PR.png)
 
