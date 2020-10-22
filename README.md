@@ -1,4 +1,4 @@
-
+>[participate on the poll for new features](https://github.com/deep5050/MastJokeMara/issues/50)
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
