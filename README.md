@@ -94,8 +94,7 @@ name: "Greet With A Random Joke"
 on:
   issues:
     types: [opened, reopened]
-  pull_request:
-    types: [opened, reopened]
+
 
 jobs:
   test:
@@ -120,8 +119,7 @@ name: "Greet With A Random Joke"
 on:
   issues:
     types: [opened, reopened]
-  pull_request:
-    types: [opened, reopened]
+
 
 jobs:
   test:
@@ -138,9 +136,6 @@ jobs:
             (ISSUE) Hi, {{author}} here is a joke for you 
             {{joke}}
           
-          PR_msg: |
-            (PR) Hi, {{author}} here is a joke for you 
-            {{joke}}
 
 ```
 
