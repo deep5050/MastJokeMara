@@ -1,4 +1,13 @@
 >[participate on the poll for new features](https://github.com/deep5050/MastJokeMara/issues/50)
+
+Want more jokes on categories like `Programming` ` Miscellaneous` `Dark` `Pun` 
+
+[![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/YES)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/YES/vote)
+
+[![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/NO)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/NO/vote)
+
+[![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/MAYBE)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/MAYBE/vote)
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
