@@ -1,12 +1,5 @@
->[participate on the poll for new features](https://github.com/deep5050/MastJokeMara/issues/50)
+![MastJokeMara](https://socialify.git.ci/deep5050/MastJokeMara/image?description=1&font=KoHo&language=1&owner=1&pattern=Brick%20Wall&theme=Dark)
 
-Want more jokes on categories like `Programming` ` Miscellaneous` `Dark` `Pun` 
-
-[![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/YES)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/YES/vote)
-
-[![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/NO)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/NO/vote)
-
-[![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/MAYBE)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/MAYBE/vote)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -15,12 +8,8 @@ Want more jokes on categories like `Programming` ` Miscellaneous` `Dark` `Pun`
     <img src="images/logo.jpg" alt="Logo">
   </a>
 
-  <h3 align="center">MAST JOKE MARA</h3>
-
   <p align="center">
-    A GitHub workflow to greet with a random joke on a new isssue or Pull Request :)
-  <br/>
-
+   
 <br />
   <a href="https://github.com/deep5050/MastJokeMara/graphs/contributors">
   <img src="https://img.shields.io/github/contributors/deep5050/MastJokeMara.svg?style=flat-square">
@@ -222,3 +211,17 @@ Dipankar Pal - dipankarpal5050@gmail.com
 <p align=center><img align=center  src="https://visitor-badge.laobi.icu/badge?page_id=deep5050.MastJokeMara" alt="Visitors">  </p>
 
 </div>
+
+
+
+
+
+>[participate on the poll for new features](https://github.com/deep5050/MastJokeMara/issues/50)
+
+Want more jokes on categories like `Programming` ` Miscellaneous` `Dark` `Pun` 
+
+[![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/YES)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/YES/vote)
+
+[![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/NO)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/NO/vote)
+
+[![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/MAYBE)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/MAYBE/vote)
