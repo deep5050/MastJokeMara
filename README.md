@@ -40,7 +40,7 @@
   </p>
 </p>
 
-
+## [Subscribe to receive updates](https://github.com/deep5050/MastJokeMara/issues/52)
 
 ## Table of Contents
 
