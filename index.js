@@ -53,7 +53,7 @@ async function run(joke) {
 
         var event = github.context.eventName;
         var greetMsg;
-        if (event === 'pull_request') {
+        if (event === 'pull_request' || event === 'pull_request_target') {
             if(!PR_msg)
             {
                 message = 'Hi, {{author}}, \nThanks for opening this PR :blue_heart: .\nContributors :people_holding_hands:  like you make the open source community :earth_africa:  such an amazing place to learn :book: , inspire :angel:, and create :art: .\nWe will review it :eyes: and get back to you as soon as possible :+1: . Just make sure you have followed the contribution guidelines.\n\nBy that time enjoy this joke :point_down: , hope you like it :smile:\n{{joke}}'
@@ -89,7 +89,7 @@ async function run(joke) {
 
 
         var issueNumber;
-        if (event === 'pull_request') {
+        if (event === 'pull_request' || event === 'pull_request_target') {
             issueNumber = context.payload.pull_request.number;
         }
         else if (event === 'issues') {

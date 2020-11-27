@@ -2,7 +2,7 @@ name: "Greet With A Random Joke"
 on:
   issues:
     types: [opened, reopened]
-  pull_request:
+  pull_request_target:
     types: [opened, reopened]
 
 jobs:
@@ -13,6 +13,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: mast joke mara
-        uses: deep5050/MastJokeMara@main
+        uses: deep5050/MastJokeMara@PR
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
