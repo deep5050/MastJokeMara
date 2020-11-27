@@ -67,7 +67,7 @@ For now it supports only programming jokes only, It will support more jokes soon
 
 ![Issue demo](images/issue.png)
 
-> On new Pull Requests (**NOT FORK-BASED PRs**)
+> On new Pull Requests 
 
 ![PR](images/PR.png)
 
@@ -94,7 +94,8 @@ name: "Greet With A Random Joke"
 on:
   issues:
     types: [opened, reopened]
-
+  pull_request_target:
+    types: [opened, reopened]
 
 jobs:
   test:
@@ -114,12 +115,12 @@ jobs:
 > Custom configuration [NEW]
 
 ```yaml
-
 name: "Greet With A Random Joke"
 on:
   issues:
     types: [opened, reopened]
-
+  pull_request_target:
+    types: [opened, reopened]
 
 jobs:
   test:
@@ -129,12 +130,14 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: mast joke mara
-        uses: deep5050/MastJokeMara@qikpatch
+        uses: deep5050/MastJokeMara@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issue_msg: |
-            (ISSUE) Hi, {{author}} here is a joke for you 
+            Hi, {{author}} here is a joke for you 
             {{joke}}
+          
+
           
 
 ```
@@ -148,6 +151,8 @@ See the [open issues](https://github.com/deep5050/MastJokeMara/issues) for a lis
 
 
 ## Version History
+
+`v1.4.0` [Fork-PR support] Added support for fork-based PRs.
 
 `v1.3.0` [Custom message support] Added support for custom Issue and PR messages
 
