@@ -1,8 +1,5 @@
 ![MastJokeMara](https://socialify.git.ci/deep5050/MastJokeMara/image?description=1&font=KoHo&language=1&owner=1&pattern=Brick%20Wall&theme=Dark)
 
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -46,24 +43,27 @@
 
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Version History](#version-history)
-* [Contributing](#contributing)
-* [Support](#support)
-* [License](#license)
-* [Contact](#contact)
-* [Related Works](#related-works)
-
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Version History](#version-history)
+- [Contributing](#contributing)
+- [Support](#support)
+- [License](#license)
+- [Contact](#contact)
+- [Related Works](#related-works)
 
 ## About The Project
-This workflow comments on a new issue or pull request by a lovely greeting and with a complimentary joke.
-For now it supports only programming jokes only, It will support more jokes soon.
 
->NOTE: I recommend you to run this workflow only on issue events, github action has no access to fork-based pull requests yet. Here 'pull requests' means only PRs raised by internal organization members or the owner himself !!
+This workflow comments on a new issue or pull request by a lovely greeting and
+with a complimentary joke. For now it supports only programming jokes only, It
+will support more jokes soon.
+
+> NOTE: I recommend you to run this workflow only on issue events, github action
+> has no access to fork-based pull requests yet. Here 'pull requests' means only
+> PRs raised by internal organization members or the owner himself !!
 
 > On new Issues
 
@@ -73,20 +73,19 @@ For now it supports only programming jokes only, It will support more jokes soon
 
 ![PR](images/PR.png)
 
-
-
 ### Built With
 
 - [@actions/toolkit](https://github.com/actions/toolkit)
 - [JokeAPI](https://github.com/Sv443/JokeAPI)
 
-
 ## Getting Started
 
-Any public or private repository can run this workflow by copying [greet_with_joke.yml](./greet_with_joke.yml) file to their `.github/workflows` directory.
-
+Any public or private repository can run this workflow by copying
+[greet_with_joke.yml](./greet_with_joke.yml) file to their `.github/workflows`
+directory.
 
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 > Default configuration
@@ -96,7 +95,6 @@ name: "Greet With A Random Joke"
 on:
   issues:
     types: [opened, reopened]
-
 
 jobs:
   test:
@@ -109,19 +107,15 @@ jobs:
         uses: deep5050/MastJokeMara@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-````
-
+```
 
 > Custom configuration [NEW]
 
 ```yaml
-
 name: "Greet With A Random Joke"
 on:
   issues:
     types: [opened, reopened]
-
 
 jobs:
   test:
@@ -137,73 +131,84 @@ jobs:
           issue_msg: |
             (ISSUE) Hi, {{author}} here is a joke for you 
             {{joke}}
-          
-
 ```
 
-When using Custom configuration **DO NOT** forget to include `{{author}}` and `{{joke}}`
-
+When using Custom configuration **DO NOT** forget to include `{{author}}` and
+`{{joke}}`
 
 ## Roadmap
 
-See the [open issues](https://github.com/deep5050/MastJokeMara/issues) for a list of proposed features (and known issues).
-
+See the [open issues](https://github.com/deep5050/MastJokeMara/issues) for a
+list of proposed features (and known issues).
 
 ## Version History
 
 `v1.3.0` [Custom message support] Added support for custom Issue and PR messages
 
-`v1.2.0` [Avoid issues raised by bot or owner] : Avoids issues/PRs raised by a bot or the owner himself. Also run only on issue or Pull Request opened and reopened events.
+`v1.2.0` [Avoid issues raised by bot or owner] : Avoids issues/PRs raised by a
+bot or the owner himself. Also run only on issue or Pull Request opened and
+reopened events.
 
 `v1.1.0` [Avoid bots] : Avoids replying to the bot comments
 
 `v1.0.0` [Initial release] : Supports programming jokes
 
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to
+be learn, inspire, and create. Any contributions you make are **greatly
+appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch 
-3. Commit your Changes 
-4. Push to the Branch 
+2. Create your Feature Branch
+3. Commit your Changes
+4. Push to the Branch
 5. Test by raising an issue or a PR on your own branch
 6. Open a Pull Request
 
+> **DO NOT** make any changes to `dist/index.js` as it is automgically generated
+> from `index.js` by vercel-ncc module.
 
-> **DO NOT** make any changes to `dist/index.js` as it is automgically generated from `index.js` by vercel-ncc module.
+> Any changes made on `index.js` MUST be reflected on `dist/index.js` too as the
+> workflow runs the `dist/index.js` NOT `index.js` on root.
 
-> Any changes made on `index.js` MUST be reflected on `dist/index.js` too as the workflow runs the `dist/index.js` NOT `index.js` on root.
-
-> **Run `npm run prepare`** before you push any changes made on `index.js` 
+> **Run `npm run prepare`** before you push any changes made on `index.js`
 
 ## Support
 
-All Kinds Of Supports Are Welcome :raised_hands:! The Most Basic Way To Show Your Support Is To Star :star2: The Project, Or To Raise Issues :speech_balloon: You Can Also Support This Project By [**becoming a sponsor on GitHub**](https://github.com/sponsors/deep5050) :clap: Or By Making A [**Paypal**](https://paypal.me/deep5050) Donation :)
+All Kinds Of Supports Are Welcome :raised_hands:! The Most Basic Way To Show
+Your Support Is To Star :star2: The Project, Or To Raise Issues :speech_balloon:
+You Can Also Support This Project By
+[**becoming a sponsor on GitHub**](https://github.com/sponsors/deep5050) :clap:
+Or By Making A [**Paypal**](https://paypal.me/deep5050) Donation :)
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Dipankar Pal - dipankarpal5050@gmail.com
 
-
 ## Related Works
-[NaughtyLust](https://github.com/deep5050/NaughtyLust) : Awesome Nautilus Scripts For Linux.
 
-[qikQR](https://github.com/deep5050/qikQR) : Minimal QR Code Generator App Made With Electron.
+[NaughtyLust](https://github.com/deep5050/NaughtyLust) : Awesome Nautilus
+Scripts For Linux.
 
-[cppcheck-action](https://github.com/deep5050/cppcheck-action) : Check Security Flaws In Your C/C++ Codes Right From GitHub Action Workflows.
+[qikQR](https://github.com/deep5050/qikQR) : Minimal QR Code Generator App Made
+With Electron.
 
-[autopy-lot](https://github.com/deep5050/autopy-lot) : GitHub Action Setup To Convert Jupyter Notebooks To Python Scripts And Markdowns.
+[cppcheck-action](https://github.com/deep5050/cppcheck-action) : Check Security
+Flaws In Your C/C++ Codes Right From GitHub Action Workflows.
+
+[autopy-lot](https://github.com/deep5050/autopy-lot) : GitHub Action Setup To
+Convert Jupyter Notebooks To Python Scripts And Markdowns.
 
 <div align=center>
 <p align=center><img align=center src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="unicorn" width="400">
@@ -214,13 +219,9 @@ Dipankar Pal - dipankarpal5050@gmail.com
 
 </div>
 
+> [participate on the poll for new features](https://github.com/deep5050/MastJokeMara/issues/50)
 
-
-
-
->[participate on the poll for new features](https://github.com/deep5050/MastJokeMara/issues/50)
-
-Want more jokes on categories like `Programming` ` Miscellaneous` `Dark` `Pun` 
+Want more jokes on categories like `Programming` `Miscellaneous` `Dark` `Pun`
 
 [![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/YES)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/YES/vote)
 
