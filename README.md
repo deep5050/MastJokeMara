@@ -1,6 +1,6 @@
 ![MastJokeMara](https://socialify.git.ci/deep5050/MastJokeMara/image?description=1&font=KoHo&language=1&owner=1&pattern=Brick%20Wall&theme=Dark)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
@@ -239,6 +239,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/krazy4code"><img src="https://avatars3.githubusercontent.com/u/72786871?v=4" width="100px;" alt=""/><br /><sub><b>Krazy 4 Code </b></sub></a><br /><a href="https://github.com/deep5050/MastJokeMara/issues?q=author%3Akrazy4code" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/mayankmohak"><img src="https://avatars0.githubusercontent.com/u/63801800?v=4" width="100px;" alt=""/><br /><sub><b>Mayank Mohak</b></sub></a><br /><a href="#infra-mayankmohak" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/deep5050/MastJokeMara/issues?q=author%3Amayankmohak" title="Bug reports">🐛</a> <a href="https://github.com/deep5050/MastJokeMara/commits?author=mayankmohak" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
