@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "krazy4code",
+      "name": "Krazy 4 Code ",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/72786871?v=4",
+      "profile": "https://github.com/krazy4code",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "MastJokeMara",
+  "projectOwner": "deep5050",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
