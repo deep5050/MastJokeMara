@@ -14,7 +14,7 @@
   </a>
 
   <p align="center">
-   
+
 <br />
   <a href="https://github.com/deep5050/MastJokeMara/graphs/contributors">
   <img src="https://img.shields.io/github/contributors/deep5050/MastJokeMara.svg?style=flat-square">
@@ -30,7 +30,7 @@
   </a>
   <a href="https://github.com/deep5050/MastJokeMara/blob/master/LICENSE.txt">
   <img src="https://img.shields.io/github/license/deep5050/MastJokeMara.svg?style=flat-square">
-  </a> 
+  </a>
   <!-- <a href="https://linkedin.com/in/othneildrew">
   <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555">
   </a> -->
@@ -131,7 +131,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issue_msg: |
-            Hi, {{author}} here is a joke for you 
+            Hi, {{author}} here is a joke for you
             {{joke}}
 ```
 
@@ -218,7 +218,7 @@ Convert Jupyter Notebooks To Python Scripts And Markdowns.
 <p align=center><img align=center src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="unicorn" width="400">
 </p>
 <p align=center>Happy Coding</p>
-  
+
 <p align=center><img align=center  src="https://visitor-badge.laobi.icu/badge?page_id=deep5050.MastJokeMara" alt="Visitors">  </p>
 
 </div>
