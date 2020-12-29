@@ -1,4 +1,7 @@
 ![MastJokeMara](https://socialify.git.ci/deep5050/MastJokeMara/image?description=1&font=KoHo&language=1&owner=1&pattern=Brick%20Wall&theme=Dark)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
 <!-- PROJECT LOGO -->
@@ -225,3 +228,22 @@ Want more jokes on categories like `Programming` ` Miscellaneous` `Dark` `Pun`
 [![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/NO)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/NO/vote)
 
 [![](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/MAYBE)](https://api.gh-polls.com/poll/01EN73BKJD66AZ4EK0BWKRQ0H3/MAYBE/vote)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/krazy4code"><img src="https://avatars3.githubusercontent.com/u/72786871?v=4" width="100px;" alt=""/><br /><sub><b>Krazy 4 Code </b></sub></a><br /><a href="https://github.com/deep5050/MastJokeMara/issues?q=author%3Akrazy4code" title="Bug reports">🐛</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
