@@ -1,7 +1,3 @@
-![MastJokeMara](https://socialify.git.ci/deep5050/MastJokeMara/image?description=1&font=KoHo&language=1&owner=1&pattern=Brick%20Wall&theme=Dark)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
 <!-- PROJECT LOGO -->
@@ -11,7 +7,8 @@
     <img src="images/logo.jpg" alt="Logo">
   </a>
 
-  <p align="center">
+  <h3 align="center"> GitHub workflow to greet new issues and pull requests with random jokes</h3>
+  <p align=center>
    
 <br />
   <a href="https://github.com/deep5050/MastJokeMara/graphs/contributors">
