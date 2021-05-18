@@ -62,7 +62,7 @@
 
 ## About The Project
 This workflow comments on a new issue or pull request by a lovely greeting and with a complimentary joke.
-For now it supports only programming jokes only, It will support more jokes soon.
+For now it supports programming jokes only, will add more jokes soon.
 
 
 > On new Issues
