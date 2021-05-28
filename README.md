@@ -26,6 +26,8 @@
   <a href="https://github.com/deep5050/MastJokeMara/blob/master/LICENSE.txt">
   <img src="https://img.shields.io/github/license/deep5050/MastJokeMara.svg?style=flat-square">
   </a> 
+  <p align=center><a href=https://www.youtube.com/channel/UCHE71XuJOPKlHSxSr40u5Lw> <img alt="YouTube Channel Views" src="https://img.shields.io/youtube/channel/views/UCHE71XuJOPKlHSxSr40u5Lw?style=social"></a>
+<a href=https://www.youtube.com/channel/UCHE71XuJOPKlHSxSr40u5Lw> <img alt="YouTube Channel Subscribers" src="https://img.shields.io/youtube/channel/subscribers/UCHE71XuJOPKlHSxSr40u5Lw?style=social"></a>
   <!-- <a href="https://linkedin.com/in/othneildrew">
   <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555">
   </a> -->
@@ -38,6 +40,7 @@
     ·
     <a href="https://github.com/deep5050/MastJokeMara/issues">Request Feature</a>
   </p>
+  
 </p>
 
 ## [Subscribe to receive updates](https://github.com/deep5050/MastJokeMara/issues/52)
